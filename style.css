@@ -1,0 +1,386 @@
+                                        /* HOME */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ .home-content{
+    height: 70vh;
+
+ }
+
+ .image-content img{
+    height: 100%;
+    width:100%
+ }
+
+ .btn-home-1,.btn-home-2{
+    border-radius: 0px 20px 0px 20px !important;
+    height: 2.8rem;
+ }
+
+
+                                        /* ABOUTUS */
+
+.aboutus img{
+    height: 70%;
+    width: 70%;
+}
+
+.aboutus{
+    height: 80vh;
+}
+
+                                      /* SERVICES */
+
+.services {
+     min-height: 80vh;
+}
+.services .servicepng {
+    height: 50%;
+    width: 80%;
+}
+
+.services .box{
+    border-left:10px solid lightskyblue;
+ 
+}
+
+
+.bgdservices{
+    height: 100%;
+    width: 30%;
+    position: absolute;
+    right: 100px;
+}
+                                    /* TESTIMONIAL */
+.testimonialpic{
+    max-height: 450px;
+    max-width: 450px;
+}
+.testimonialpicture{
+    height: 100%;
+    width: 100%;
+}
+.testipic{
+    height: 60%;
+    width: 100%;
+}
+
+.whycustomers{
+    position:absolute;
+    left: 50%;
+    bottom:5%;
+    transform: translateX(-50%) translateY(5%);
+    font-size: clamp(0.9rem, 4vw, 2rem);
+    white-space: nowrap;
+}
+.whychooseus{
+    color:lightgray;
+    font-size: clamp(3rem, 8vw, 8rem);
+}
+.text{
+    position: relative;
+}
+/* reviews */
+
+.image-left,.image-right{
+    height: 100%;
+    width: 100%;
+    max-height: 500px;
+    max-width: 400px;
+}
+.image-left img,.image-right img{
+    height: 100%;
+    width: 100%;
+}
+/* Contact Us Page */
+
+
+.map {
+  height: 50vh;
+}
+
+
+.lastpic {
+  max-width: 250px;
+  max-height: 250px;
+}
+.lastpic img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+                                        /* home */
+     .btn-home-1,.btn-home-2{
+        font-size: 0.8rem !important;
+     }
+                                        /* aboutus */
+    
+     .aboutus img{
+    height: 80%;
+    width: 80%;
+}
+                                        /* testi */
+    .reviewcol-1,.reviewcol-2,.reviewcol-3{
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .reviewcol-2,.reviewcol-3{
+        padding-top: 1rem !important;
+    }
+    .image-rightt{
+    max-height: 400px;
+    max-width: 400px;
+}
+
+}
+
+                                                /* animation */
+                                                /* navbar */
+    /* Navbar animations */
+
+/* Slide-in effect for brand */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-brand {
+  animation: slideIn 1s ease forwards;
+}
+
+/* Hover underline animation for nav links */
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffcc00; 
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff9900 !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Fade animation for nav items on load */
+.navbar-nav .nav-link {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.navbar-nav .nav-link:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.navbar-nav .nav-link:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.navbar-nav .nav-link:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.navbar-nav .nav-link:nth-child(4) {
+  animation-delay: 1.2s;
+}
+.navbar-nav .nav-link:nth-child(5) {
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+                                                    /* index */
+/* Fade in and slide from left */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Zoom in effect */
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.home-content h1,
+.home-content p,
+.home-buttons {
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+.home-content h1 {
+  animation-delay: 0.3s;
+}
+
+.home-content p {
+  animation-delay: 0.6s;
+}
+
+.home-buttons {
+  animation-delay: 0.9s;
+}
+
+/* Image zoom animation */
+.image-content img {
+  animation: zoomIn 1s ease forwards;
+  animation-delay: 1.2s;
+}
+
+/* Buttons hover effect */
+.btn-home-1, .btn-home-2 {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-home-1:hover, .btn-home-2:hover {
+  transform: translateY(-5px);
+  background-color: #0056b3; 
+
+}
+
+.image-content:hover,.left-content:hover{
+    transform: scale(1.1);
+}
+.image-content,.left-content{
+ transition: 1s ease;
+}
+
+
+                                                /* aboutus */
+.aboutus img:hover,.right-content-aboutus:hover{
+     transform: scale(1.1);
+}
+.aboutus img,.right-content-aboutus{
+     transition: 1s ease;
+}
+                                                /* services */
+   
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.box {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+
+.servicepng {
+    transition: transform 0.3s ease;
+}
+
+.servicepng:hover {
+    transform: scale(1.1);
+}
+
+                                                /* testi */
+
+                                                /* contactus */
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.contact-us > * {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.contact-us > *:nth-child(1) { animation-delay: 0.2s; }
+.contact-us > *:nth-child(2) { animation-delay: 0.4s; }
+
+/* Hover zoom for map */
+.map iframe {
+    transition: transform 0.5s ease;
+}
+
+.map iframe:hover {
+    transform: scale(1.03);
+}
+
+/* Hover highlight for quick links */
+.info-section ul li a {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.info-section ul li a:hover {
+    color: #ffc107 !important; 
+    transform: translateX(5px);
+}
+
+/* Fade-in for brand and contact info */
+.info-section .col-12 {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.info-section .col-12:nth-child(1) { animation-delay: 0.2s; }
+.info-section .col-12:nth-child(2) { animation-delay: 0.4s; }
+.info-section .col-12:nth-child(3) { animation-delay: 0.6s; }
+.info-section .col-12:nth-child(4) { animation-delay: 0.8s; }
+
+/* Footer fade-in and smooth text */
+.info-section hr, .info-section p {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+    animation-delay: 1s;
+}
+
+/* Icon  animation */
+@keyframes bounce {
+    0%,50%,80% { transform: translateY(0); }
+    40% { transform: translateY(-15px); }
+    60% { transform: translateY(-8px); }
+}
+
+.info-section i.fa-bolt {
+    animation: bounce 2s infinite;
+}
